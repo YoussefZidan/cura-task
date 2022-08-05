@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "settings": {},
+  "env": {
+    "browser": true, // Enables browser globals like window and document
+    "amd": true, // Enables require() and define() as global variables as per the amd spec.
+    "node": true, // Enables Node.js global variables and Node.js scoping.
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022, // Use the latest ecmascript standard
+    "sourceType": "module", // Allows using import/export statements
+    "ecmaFeatures": {
+      "jsx": true // Enable JSX since we're using React
+    }
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["react", "react-hooks", "prettier"],
+  "rules": {
+    "prettier/prettier": ["warn", {}, { "usePrettierrc": true }], // Use .prettierrc file as source
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // To allow importing .jsx files
+    "no-console": 1,
+    "no-unused-vars": 1,
+    "import/no-unresolved": 2,
+    "no-undefined": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 0,
+    "import/prefer-default-export": 0,
+    "default-param-last": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/button-has-type": 1,
+    "react/prop-types": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "prefer-promise-reject-errors": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "no-plusplus": 0,
+    "global-require": 0,
+    "import/no-extraneous-dependencies": 0
+    // add more rules here...
+  }
+}
